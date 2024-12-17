@@ -1,3 +1,4 @@
+Base de datos desactualizada, falta en el proyecto el html y el js del inventario, pero ya estan hechos 
 # PanaderiaLD
 # Comandos SQL para Crear la Base de Datos y Tabla de Productos
 
