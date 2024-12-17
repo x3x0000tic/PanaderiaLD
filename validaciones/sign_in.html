@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.jpeg" type="image/x-icon">
+    <title>Sign In</title>
+
+    <link rel="stylesheet" href="/modulo/sesiones/sign_in/sign_in_styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor_logo">
+            <a href="/index" class="enlace_logo"><h1 class="jerarquia_logo">Bolillo pal susto</h1></a>
+        </div>
+        
+        <div class="contenedor_enlaces_navegacion">
+            <a class="item_navegacion enlace" href="">CATÁLOGO</a>
+            <a class="item_navegacion enlace" href="">SUCURSALES</a>
+            <a class="item_navegacion enlace" href="cotizacion" >COTIZADOR</a>
+            
+            <a href=""><img class="icono_header item_navegacion" src="../images/header/buscar.png" alt=""></a>
+            <a href="sign_in"><img class="icono_header item_navegacion" src="../images/header/usuario.png" alt=""></a>
+            <a href=""><img class="icono_header item_navegacion" src="../images/header/carrito.png" alt=""></a>
+        </div>
+
+        <div class="contenedor_gestionar" style="display: none;" id="gestionar">
+            
+        </div>        
+
+        <input type="hidden" id="id_cargada" name="id_cargada">
+    </header>
+
+    <div class="contenedor_formulario">
+        <h2 class="subtitulo_formulario">INICIAR SESIÓN</h2>
+
+        <hr class="adorno_pequeño">
+        <hr class="adorno_grande">
+
+        <form class="formulario">
+            <label class="label_input" for="correo">Correo</label>
+            <input type="email" id="correo" class="input required">
+
+            <label class="label_input" for="password">Contraseña</label>
+            <input type="password" id="password" class="input required">
+
+            <a href="" class="enlace_recuperar">Olvidé mi contraseña</a>
+
+            <input type="submit" value="INICIAR SESIÓN" class="boton" id="btn_sign_in">
+        </form>
+
+        <a href="sign_up" class="enlace_navegacion">¿Aún no tienes cuenta? <span>¡REGISTRATE!</span></a>
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor_decoracion_footer">
+            <img class="imagen_decorativa" src="https://sso.jexbit.mx/FileManager/thumbs/d7e886ff-60ff-475b-86b3-fd80c6e123a7.png" alt="Imagen ilustrativa">
+            
+            <p class="texto_footer">Julian Chávez García</p>
+            <p class="texto_footer">Almita póngame 10</p>
+        </div>
+
+        <div class="contenedor_enlaces_footer">
+            <h3 class="enlace_footer_importante">INICIO</h3>
+            
+            <a href="" class="enlace_footer">Tienda</a>
+            <a href="" class="enlace_footer">Sucursales</a>
+            <a href="" class="enlace_footer">Blog</a>
+            <a href="" class="enlace_footer">Contáctanos</a>
+            <a href="" class="enlace_footer">Conócenos</a>
+        </div>
+
+        <div class="miembros_footer">
+            <h3 class="enlace_footer_importante">MIEMBROS</h3>
+            
+            <a href="" class="enlace_footer">Mi cuenta</a>
+        </div>
+
+        <div class="contenedor_redes_sociales">
+            <h3 class="enlace_footer_importante">SÍGUENOS</h3>
+            
+            <div class="contenedor_iconos_redes">
+                <a href=""><img class="img_footer" src="../images/footer/facebook.png" alt="Facebook"></a>
+                <a href=""><img class="img_footer" src="../images/footer/twitter.png" alt="Twitter"></a>
+                <a href=""><img class="img_footer" src="../images/footer/instagram.png" alt="Instagram"></a>
+                <a href=""><img class="img_footer" src="../images/footer/tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script type="module" src="/scripts/javascript/user_functions/sign_in/consts_sign_in.js"></script>

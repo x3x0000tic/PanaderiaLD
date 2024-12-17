@@ -1,14 +1,33 @@
-const express = require("express");
-const path = require("path");
-const app = express();
+import express from 'express';
+import morgan from 'morgan';
 
-// Sirve archivos estáticos desde la carpeta principal del proyecto
-app.use(express.static(path.join(__dirname)));
+import { join, dirname} from 'path';
+import { fileURLToPath } from 'url';
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
+import router from './router.js';
+
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const app = express()
+
+app.set('port', process.env.PORT || 3000);
+
+app.use(morgan('dev'))
+app.use(express.urlencoded({ limit: '5mb', extended: true }))
+app.use(express.json({ limit: '5mb' }))
+
+
+app.use(express.static(__dirname));  // Sirve archivos estáticos desde la raíz
+app.use( express.static(join(__dirname, './login')))
+app.use( express.static(join(__dirname, './login2')))
+
+app.use(router)
+
+app.get('/', (req, res) => {
+    res.sendFile(join(__dirname, './index.html'))
 });
 
-app.listen(3000, () => {
-    console.log("Servidor escuchando en el puerto 3000");
+app.listen(app.get('port'), () => {
+    console.log('Server listening on port', app.get('port'));
+    console.log('http://localhost:' + app.get('port'));
 });
